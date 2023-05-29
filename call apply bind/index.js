@@ -1,9 +1,7 @@
 let name = {
     firstname: "Kamarali",
     lastName: "Dukandar",
-    printFullName: function(){
-        console.log(this.firstname + " " + this.lastName);
-    }
+
 }
 
 let name2 = {
@@ -12,7 +10,13 @@ let name2 = {
 
 }
 
-name.printFullName();
+printFullName = function(hometown, state){
+    console.log(this.firstname + " " + this.lastName + " from " + hometown + ", " + state);
+}
+
+printFullName.call(name, "Pune" , "Maharashtra");
 
 // function borrowing
-name.printFullName.call(name2);
+printFullName.call(name2, "Ranchi" , "Jharkhand");
+
+printFullName.apply(name2, ["Ranchi" , "Jharkhand"]);
