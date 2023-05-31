@@ -36,3 +36,6 @@ let multipication = function(x){
 
 let multipicationByTwo = multipication(2);
 multipicationByTwo(3)
+
+let multipicationByThree = multipication(3)
+multipicationByThree(10)
